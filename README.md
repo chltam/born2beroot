@@ -39,3 +39,24 @@ pam-pwquality man: https://man.archlinux.org/man/pam_pwquality.8
 
 `getent group`: show all group
 
+## Sudo
+
+`/etc/var/log` `touch sudo.log` if needed.
+
+`sudo visudo` or `vim /etc/sudoers` to edit the config file.
+
+`sudo visudo` is more preferred since it validates the syntax upon saving.
+
+`sudo update-alternatives --config editor` to change the default editor.
+
+`Default  env_reset`: resets the terminal environment to remove any user variables.
+
+`Default  mail_badpass`: mail notices to `mailto`user when bad sudo password attempts encountered.
+
+`Default  secure_path=...`: restrict the PATH that will be used for sudo operations.
+
+`Defaults	badpass_message="incorrect password!"
+Defaults	passwd_tries=3
+Defaults	logfile="/var/log/sudo.log"
+Defaults	log_input, log_output
+Defaults	requiretty`
