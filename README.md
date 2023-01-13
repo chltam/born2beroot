@@ -45,6 +45,8 @@ Defaults	requiretty
 
 `root xx=(xx:xx) ALL` The last “ALL” indicates these rules apply to all commands.
 
+`%sudo  ALL=(ALL:ALL) ALL` group name must start with `%` in the group privilege section
+
 ## Password policy:
 
 `sudo apt-get install libpam-pwquality` to install the moudule
