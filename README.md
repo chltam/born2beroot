@@ -201,3 +201,5 @@ https://www.computerhope.com/issues/ch001079.htm
 `ip a | grep ether | awk '{print($2)}'` MAC address
 
 #### Sudo command executed
+`journalctl _COMM=sudo | grep COMMAND | wc -l`
+
