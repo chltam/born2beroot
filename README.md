@@ -65,6 +65,20 @@ Defaults	requiretty
 
 #### Reference: https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file
 
+## UFW
+`apt-get install ufw -y` to install ufw
+
+`sudo ufw enable`
+
+`sudo ufw status` 
+
+`sudo ufw allow ssh` `ufw allow 4242`
+
+`sudo ufw delete NUMBER` to delete specific port according to the number from`sudo ufw status numbered`
+
+`sudo ufw delete allow 22/tcp` remove directly
+
+
 ## Password policy:
 
 `sudo apt-get install libpam-pwquality` to install the moudule
@@ -103,3 +117,12 @@ pam-pwquality man: https://man.archlinux.org/man/pam_pwquality.8
 ## Crontab
 
 `apt-get install net-tools -y`
+
+### monitoring.sh
+`uname -a`: print all infor of OS architecture and kernel version
+
+or
+
+`hostnamectl | grep Kernel`
+
+`hostnamectl | grep Architecture`
