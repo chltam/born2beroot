@@ -143,4 +143,6 @@ udev, temps: https://askubuntu.com/questions/1150434/what-is-udev-and-tmpfs
 
 /dev/ and subdir: https://unix.stackexchange.com/questions/18239/understanding-dev-and-its-subdirs-and-files
 
+`df -BG | grep '^/dev/' | grep -v boot` exclude the files mount on boot, they are used to boot the OS.
 
+`df -BG | grep '^/dev/' | grep -v boot | awk '{fd += $2} {ud += $3} {pd += $5} END {printf("%d/%dG (%d%%)", ud, fd, pd)}'`
