@@ -146,3 +146,11 @@ udev, temps: https://askubuntu.com/questions/1150434/what-is-udev-and-tmpfs
 `df -BG | grep '^/dev/' | grep -v boot` exclude the files mount on boot, they are used to boot the OS.
 
 `df -BG | grep '^/dev/' | grep -v boot | awk '{fd += $2} {ud += $3} {pd += $5} END {printf("%d/%dG (%d%%)", ud, fd, pd)}'`
+
+`vmstat 1 2` check the stat every 1s for 2 times
+
+`vmstat 1 2 | tail -1` only show the last line
+
+`vmstat | tail -1 | awk '{printf("%d%%", 100-$15)}'`: `$15` is the 15th field, which is the % of cpu idle time, 100-cpu idle time will be cpu usage
+
+cpu usage: https://www.baeldung.com/linux/get-cpu-usage
