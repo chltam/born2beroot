@@ -31,7 +31,7 @@ switch from NAT to Bridge Adapter
 `usermod -aG sudo username` add user to the sudo group
 
 ### config sudoers
-`/etc/var/log` `touch sudo.log` if needed.
+`/var/log` `touch sudo.log` if needed.
 
 `sudo visudo` or `vim /etc/sudoers` to edit the config file.
 
