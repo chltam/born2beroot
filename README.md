@@ -134,3 +134,13 @@ cpu, vcpu, core, logical core: https://superuser.com/questions/1257392/physical-
 `free -m` memory usage in MB
 
 `free -m | grep Mem | awk '{printf("%d/%dMB (%.2f%%)"), $7, $2, $7/$2*100'}`
+
+`df -BG` to check disk usage in Gb
+
+`df -BG | grep '^/dev/'` include path start with `/dev/` only since `udev` and `tmpfs` are actually located in RAM
+
+udev, temps: https://askubuntu.com/questions/1150434/what-is-udev-and-tmpfs
+
+/dev/ and subdir: https://unix.stackexchange.com/questions/18239/understanding-dev-and-its-subdirs-and-files
+
+
