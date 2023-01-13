@@ -128,6 +128,9 @@ or
 `hostnamectl | grep Architecture`
 
 cpu, vcpu, core, logical core: https://superuser.com/questions/1257392/physical-vs-logical-vs-virtual-cores
+
 `cat /proc/meminfo` for detail meminfo
+
 `free -m` memory usage in MB
+
 `free -m | grep Mem | awk '{printf("%d/%dMB (%.2f%%)"), $7, $2, $7/$2*100'}`
