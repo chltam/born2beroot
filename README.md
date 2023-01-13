@@ -6,6 +6,8 @@ super + right = new tty
 du -ahx | sort -rh | head -20
 
 `su` to login as root
+
+`systemctl status ssh` or `sudo service ssh status` to check ssh status
 ## Sudo
 ### Install sudo
 `apt-get install sudo -y`
@@ -46,6 +48,8 @@ Defaults	requiretty
 `root xx=(xx:xx) ALL` The last “ALL” indicates these rules apply to all commands.
 
 `%sudo  ALL=(ALL:ALL) ALL` group name must start with `%` in the group privilege section
+
+#### Reference: https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file
 
 ## Password policy:
 
