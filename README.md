@@ -176,3 +176,9 @@ https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html
 
 `if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo inactive; else echo active; fi` if the count is 0, LVM is not active, else it is active.
 
+`-eq`: comparison operator used in the [ ] construct
+
+`fi`: keyword to close the if-else statement
+
+#### Number of active connection
+
