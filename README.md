@@ -119,6 +119,7 @@ pam-pwquality man: https://man.archlinux.org/man/pam_pwquality.8
 `apt-get install net-tools -y`
 
 ### monitoring.sh
+#### Architecture and Kernel
 `uname -a`: print all infor of OS architecture and kernel version
 
 or
@@ -126,9 +127,9 @@ or
 `hostnamectl | grep Kernel`
 
 `hostnamectl | grep Architecture`
-
+#### CPU
 cpu, vcpu, core, logical core: https://superuser.com/questions/1257392/physical-vs-logical-vs-virtual-cores
-
+#### RAM and disk usage
 `cat /proc/meminfo` for detail meminfo
 
 `free -m` memory usage in MB
@@ -146,7 +147,7 @@ udev, temps: https://askubuntu.com/questions/1150434/what-is-udev-and-tmpfs
 `df -BG | grep '^/dev/' | grep -v boot` exclude the files mount on boot, they are used to boot the OS.
 
 `df -BG | grep '^/dev/' | grep -v boot | awk '{fd += $2} {ud += $3} {pd += $5} END {printf("%d/%dG (%d%%)", ud, fd, pd)}'`
-
+#### CPU usage
 `vmstat 1 2` check the stat every 1s for 2 times
 
 `vmstat 1 2 | tail -1` only show the last line
