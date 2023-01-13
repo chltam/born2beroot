@@ -7,7 +7,7 @@ du -ahx | sort -rh | head -20
 
 `su` to login as root
 
-![Screenshot from 2023-01-13 16-29-51](https://user-images.githubusercontent.com/114371464/212357397-a46a040f-e8ee-45f0-8657-bed1a6e9f088.png)
+![Screenshot from 2023-01-13 16-32-57](https://user-images.githubusercontent.com/114371464/212358044-1d373edc-d8de-40a4-8a34-7e27fa274c2c.png)
 
 `ip a` or `ifconfig` or `ip addr show` to check the ip address of the vm
 
@@ -15,6 +15,8 @@ du -ahx | sort -rh | head -20
 
 
 `systemctl status ssh` or `sudo service ssh status` to check ssh status
+
+`ssh-keygen -R hostIP` to remove a specific host in ~/.ssh/known_hosts
 
 change the 
 ## Sudo
