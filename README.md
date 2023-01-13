@@ -11,6 +11,8 @@ du -ahx | sort -rh | head -20
 
 `ip a` or `ifconfig` or `ip addr show` to check the ip address of the vm
 
+`ssh username@ip -p 4242`
+
 
 `systemctl status ssh` or `sudo service ssh status` to check ssh status
 
