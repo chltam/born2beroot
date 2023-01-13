@@ -7,6 +7,8 @@ du -ahx | sort -rh | head -20
 
 `su` to login as root
 
+`wc -l` `wc -w`: `-1` counts for lines amd `-w` counts for words
+
 how to ssh into VB machine https://averagelinuxuser.com/ssh-into-virtualbox/
 
 ![Screenshot from 2023-01-13 16-32-57](https://user-images.githubusercontent.com/114371464/212358044-1d373edc-d8de-40a4-8a34-7e27fa274c2c.png)
@@ -180,5 +182,22 @@ https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html
 
 `fi`: keyword to close the if-else statement
 
+https://askubuntu.com/questions/202613/how-do-i-check-whether-i-am-using-lvm
+
 #### Number of active connection
 
+`netstat -natp | grep ESTABLISHED | wc -l`
+
+https://www.computerhope.com/issues/ch001079.htm
+
+#### Number is users using the server
+
+`users | wc -w`
+
+#### IP and MAC
+
+`hostname -I` IP
+
+`ip a | grep ether | awk '{print($2)}'` MAC address
+
+#### Sudo command executed
