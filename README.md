@@ -127,14 +127,17 @@ or
 `hostnamectl | grep Kernel`
 
 `hostnamectl | grep Architecture`
+
 #### CPU
 cpu, vcpu, core, logical core: https://superuser.com/questions/1257392/physical-vs-logical-vs-virtual-cores
+
 #### RAM and disk usage
+
 `cat /proc/meminfo` for detail meminfo
 
 `free -m` memory usage in MB
 
-`free -m | grep Mem | awk '{printf("%d/%dMB (%.2f%%)"), $7, $2, $7/$2*100'}`
+`free -m | grep Mem | awk '{printf("%d/%dMB (%.2f%%)", $7, $2, $7/$2*100)}'`
 
 `df -BG` to check disk usage in Gb
 
@@ -147,6 +150,7 @@ udev, temps: https://askubuntu.com/questions/1150434/what-is-udev-and-tmpfs
 `df -BG | grep '^/dev/' | grep -v boot` exclude the files mount on boot, they are used to boot the OS.
 
 `df -BG | grep '^/dev/' | grep -v boot | awk '{fd += $2} {ud += $3} {pd += $5} END {printf("%d/%dG (%d%%)", ud, fd, pd)}'`
+
 #### CPU usage
 `vmstat 1 2` check the stat every 1s for 2 times
 
@@ -155,3 +159,20 @@ udev, temps: https://askubuntu.com/questions/1150434/what-is-udev-and-tmpfs
 `vmstat | tail -1 | awk '{printf("%d%%", 100-$15)}'`: `$15` is the 15th field, which is the % of cpu idle time, 100-cpu idle time will be cpu usage
 
 cpu usage: https://www.baeldung.com/linux/get-cpu-usage
+
+#### Reboot time
+
+`who -b | awk '{print($3, $4)}'` who boot
+
+https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html
+
+`last -i` to check who historial login
+
+#### LVM check
+
+`lsblk | grep "lvm" |` check the line that contain lvm in `lsblk`
+
+`lsblk | grep "lvm" | wc -l` count the number of result
+
+`if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo inactive; else echo active; fi` if the count is 0, LVM is not active, else it is active.
+
