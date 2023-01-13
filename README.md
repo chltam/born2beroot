@@ -7,6 +7,8 @@ du -ahx | sort -rh | head -20
 
 `su` to login as root
 
+how to ssh into VB machine https://averagelinuxuser.com/ssh-into-virtualbox/
+
 ![Screenshot from 2023-01-13 16-32-57](https://user-images.githubusercontent.com/114371464/212358044-1d373edc-d8de-40a4-8a34-7e27fa274c2c.png)
 
 switch from NAT to Bridge Adapter
@@ -98,3 +100,6 @@ pam-pwquality man: https://man.archlinux.org/man/pam_pwquality.8
 
 `getent group`: show all group
 
+## Crontab
+
+`apt-get install net-tools -y`
