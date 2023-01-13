@@ -9,6 +9,8 @@ du -ahx | sort -rh | head -20
 
 ![Screenshot from 2023-01-13 16-32-57](https://user-images.githubusercontent.com/114371464/212358044-1d373edc-d8de-40a4-8a34-7e27fa274c2c.png)
 
+switch from NAT to Bridge Adapter
+
 `ip a` or `ifconfig` or `ip addr show` to check the ip address of the vm
 
 `ssh username@ip -p 4242`
@@ -18,7 +20,6 @@ du -ahx | sort -rh | head -20
 
 `ssh-keygen -R hostIP` to remove a specific host in ~/.ssh/known_hosts
 
-change the 
 ## Sudo
 ### Install sudo
 `apt-get install sudo -y`
