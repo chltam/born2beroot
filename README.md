@@ -7,6 +7,10 @@ super + right = new tty
 
 du -ahx | sort -rh | head -20
 
+`dpkg -l ` to check installed package
+
+`dpkg -l | grep sudo` to check sudo
+
 `su` to login as root
 
 `wc -l` `wc -w`: `-1` counts for lines amd `-w` counts for words
