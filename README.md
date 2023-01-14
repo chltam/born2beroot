@@ -112,9 +112,13 @@ pam-pwquality man: https://man.archlinux.org/man/pam_pwquality.8
 
 `sudo groupadd new_group`: create a new group
 
+`sudo usermod -aG group_name user_name`: add user to a group, `-a` to add the user to an existing supplementary group, `-g` will change the user primary group, `-G` will change the user primary group AND remove the user previous supplementary group.
+
 `getent`: get entries from a database
 
 `getent group`: show all group
+
+`groups user_name`: check what groups a specific user belongs to
 
 ## Crontab
 
