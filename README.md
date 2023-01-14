@@ -13,6 +13,8 @@ du -ahx | sort -rh | head -20
 
 `su` to login as root
 
+APParmor vs SELinux: https://phoenixnap.com/kb/apparmor-vs-selinux
+
 `wc -l` `wc -w`: `-1` counts for lines amd `-w` counts for words
 
 how to ssh into VB machine https://averagelinuxuser.com/ssh-into-virtualbox/
