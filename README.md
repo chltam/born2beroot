@@ -3,6 +3,8 @@
 ## Random
 super + right = new tty
 
+`apt-get install net-tools -y`
+
 du -ahx | sort -rh | head -20
 
 `su` to login as root
@@ -56,7 +58,7 @@ Defaults	requiretty
 ### User privilege specification
 `username ALL=(ALL:ALL) ALL`
 
-`root <mark>ALL</mark>=(xx:xx) xx` The first field indicates the username that the rule will apply to (root).
+`root ALL=(xx:xx) xx` The first “ALL” indicates that this rule applies to all hosts.
 
 `root xx=(ALL:xx) xx` This “ALL” indicates that the root user can run commands as all users.
 
@@ -121,11 +123,7 @@ pam-pwquality man: https://man.archlinux.org/man/pam_pwquality.8
 
 `groups user_name`: check what groups a specific user belongs to
 
-## Crontab
-
-`apt-get install net-tools -y`
-
-### monitoring.sh
+## monitoring.sh
 #### Architecture and Kernel
 `uname -a`: print all infor of OS architecture and kernel version
 
@@ -230,3 +228,6 @@ https://www.computerhope.com/issues/ch001079.htm
 #### Sudo command executed
 `journalctl _COMM=sudo | grep COMMAND | wc -l`
 
+`sudo crontab -u root -e`
+
+`*/10 * * * */usr/local/bin/monitoring.sh`
