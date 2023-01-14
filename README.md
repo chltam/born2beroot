@@ -232,6 +232,10 @@ https://www.computerhope.com/issues/ch001079.htm
 #### Sudo command executed
 `journalctl _COMM=sudo | grep COMMAND | wc -l`
 
+## Crontab
 `sudo crontab -u root -e`
 
 `*/10 * * * */usr/local/bin/monitoring.sh`
+
+`sudo cronstart` `sudo cronstop`
+
