@@ -138,6 +138,17 @@ or
 Linux Architecture: https://www.interviewbit.com/blog/linux-architecture/
 
 #### CPU
+
+`grep "physical id" /proc/cpuinfo | sort | uniq | wc -l` count how many cpu on socket
+
+`grep '^core id' /proc/cpuinfo | sort | uniq | wc -l` number of physical core
+
+`nproc` total number processor
+
+`grep "^processor" /proc/cpuinfo | wc -l` should have same number as `nproc`
+
+Core and thread: https://www.guru99.com/cpu-core-multicore-thread.html
+
 cpu, vcpu, core, logical core: https://superuser.com/questions/1257392/physical-vs-logical-vs-virtual-cores
 
 #### RAM and disk usage
