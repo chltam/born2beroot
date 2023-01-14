@@ -159,7 +159,11 @@ udev, temps: https://askubuntu.com/questions/1150434/what-is-udev-and-tmpfs
 
 `df -BG | grep '^/dev/' | grep -v boot` exclude the files mount on boot, they are used to boot the OS.
 
-`df -BG | grep '^/dev/' | grep -v boot | awk '{fd += $2} {ud += $3} {pd += $5} END {printf("%d/%dG (%d%%)", ud, fd, pd)}'`
+`df -BG | grep '^/dev/' | grep -v boot | grep -v loop | awk '{fdg += $2} END {printf("%dG", fdg)}'` full size in G
+
+`df -BM | grep '^/dev/' | grep -v boot | grep -v loop | awk '{udm += $3} END {printf("%dMB", udm)}'` used space in MB
+
+`df -BM | grep '^/dev/' | grep -v boot | grep -v loop | awk '{fd += $2} {ud += $3} END {printf("(%.1f%%)", ud/fd*100)}'` usage calculated in MB
 
 #### CPU usage
 `vmstat 1 2` check the stat every 1s for 2 times
