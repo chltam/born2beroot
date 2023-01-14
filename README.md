@@ -134,6 +134,8 @@ or
 
 `hostnamectl | grep Architecture`
 
+Linux Architecture: https://www.interviewbit.com/blog/linux-architecture/
+
 #### CPU
 cpu, vcpu, core, logical core: https://superuser.com/questions/1257392/physical-vs-logical-vs-virtual-cores
 
@@ -143,7 +145,7 @@ cpu, vcpu, core, logical core: https://superuser.com/questions/1257392/physical-
 
 `free -m` memory usage in MB
 
-`free -m | grep Mem | awk '{printf("%d/%dMB (%.2f%%)", $7, $2, $7/$2*100)}'`
+`free -m | grep Mem | awk '{printf("%d/%dMB (%.2f%%)", $3, $2, $3/$2*100)}'`
 
 `df -BG` to check disk usage in Gb
 
