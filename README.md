@@ -239,7 +239,7 @@ https://www.computerhope.com/issues/ch001079.htm
 `journalctl _COMM=sudo | grep COMMAND | wc -l`
 
 ## Crontab
-`sudo crontab -u root -e`
+`sudo crontab -u root -e`: `-u root` specifies managing cron table for root, `-e` means edit
 
 `*/10 * * * */usr/local/bin/monitoring.sh`
 
