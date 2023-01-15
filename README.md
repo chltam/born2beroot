@@ -98,6 +98,8 @@ Defaults	requiretty
 
 config: /etc/pam.d/common-password
 
+`/etc/login.defs`: pw expire day
+
 `minlen=10`
 
 `ucredit=-1`: must contain atleast one uppercase, no credit for uppercase
