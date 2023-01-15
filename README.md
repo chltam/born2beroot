@@ -9,6 +9,8 @@ du -ahx | sort -rh | head -20
 
 `dpkg -l ` to check installed package
 
+`sudo hostnamectl set-hostname new_hostname` set new host name
+
 `dpkg -l | grep sudo` to check sudo
 
 `su` to login as root
