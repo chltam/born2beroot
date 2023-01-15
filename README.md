@@ -15,7 +15,7 @@ du -ahx | sort -rh | head -20
 
 `su` to login as root
 
-`shasum name.vbox` to create signature
+`shasum name.vdi` to create signature
 
 APParmor vs SELinux: https://phoenixnap.com/kb/apparmor-vs-selinux
 
