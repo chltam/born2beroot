@@ -114,6 +114,8 @@ config: /etc/pam.d/common-password
 
 root old pw wont be compare, so`difok` is not applied to root
 
+`chage` man: https://linux.die.net/man/1/chage
+
 pam-pwquality man: https://man.archlinux.org/man/pam_pwquality.8
 
 ## User and group
