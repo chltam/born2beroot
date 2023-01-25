@@ -247,5 +247,5 @@ https://www.computerhope.com/issues/ch001079.htm
 
 `*/10 * * * */usr/local/bin/monitoring.sh`
 
-`sudo cronstart` `sudo cronstop`
+`sudo cronstart` `sudo cronstop` `sudo service cron stop`
 
